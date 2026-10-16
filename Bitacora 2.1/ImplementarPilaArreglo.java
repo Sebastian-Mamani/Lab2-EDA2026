@@ -1,3 +1,6 @@
+/**
+Implementacion de una Pila usando un arreglo
+  */
 public class PilaArreglo<T> implements Pila<T> {
 public void push(T item) {
 }
