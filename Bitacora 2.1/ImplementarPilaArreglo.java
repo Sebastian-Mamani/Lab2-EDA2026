@@ -1,5 +1,6 @@
 /**
 Implementacion de una Pila usando un arreglo
+@param <T> Tipo de elemento a almacenar
   */
 public class PilaArreglo<T> implements Pila<T> {
 public void push(T item) {
