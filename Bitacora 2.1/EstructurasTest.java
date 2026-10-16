@@ -4,6 +4,7 @@ Valida el comportamiento de estructuras vacias y el funcionamiento Lifo y Fifo
 */
 public class EstructurasTest {
   public static void main(String[] args) {
+    //Prueba de estructura vacia, metodos FIFO y LIFO
     System.out.println("Iniciando pruebas");
     pruebaPilaEnlazadaVacia();
     pruebaPilaArregloVacia();
