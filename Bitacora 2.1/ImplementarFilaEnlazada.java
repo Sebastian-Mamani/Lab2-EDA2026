@@ -1,3 +1,6 @@
+/**
+Implementacion de una fila usando nodos enlazados
+  */
 public class FilaEnlazada<T> implements Fila<T> {
   public void enqueue (T item) {
   }
