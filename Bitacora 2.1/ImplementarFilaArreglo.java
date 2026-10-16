@@ -1,5 +1,6 @@
 /**
 Implementacion de una fila usando un arreglo
+@param <T> Tipo de elemento a almacenar
   */
 public class FilaArreglo<T> implements Fila<T> {
   public void enqueue (T item) {
