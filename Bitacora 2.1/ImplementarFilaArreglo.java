@@ -1,3 +1,6 @@
+/**
+Implementacion de una fila usando un arreglo
+  */
 public class FilaArreglo<T> implements Fila<T> {
   public void enqueue (T item) {
   }
