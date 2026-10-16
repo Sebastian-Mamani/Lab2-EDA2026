@@ -1,5 +1,6 @@
 /**
 Implementacion de una fila usando nodos enlazados
+@param <T> Tipo de elemento a almacenar
   */
 public class FilaEnlazada<T> implements Fila<T> {
   public void enqueue (T item) {
