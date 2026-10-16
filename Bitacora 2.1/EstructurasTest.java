@@ -1,7 +1,6 @@
 /**
-use booleanos por que se me hacia simple para comparar si estaba vacio o no
-creo que la prueba esta bien 
-voy a hacer las de arreglo igual despues de comer
+Clase de pruebas para verificar las implementaciones de Pila y Fila
+Valida el comportamiento de estructuras vacias y el funcionamiento Lifo y Fifo 
 */
 public class EstructurasTest {
   public static void main(String[] args) {
@@ -62,7 +61,7 @@ public class EstructurasTest {
     if(resultado != null && resultado==2){
       System.out.println("La pila enlazada sigue el orden LIFO");
     }else{
-      System.out.println("La pila enlazada no siguio el orden FIFO");
+      System.out.println("La pila enlazada no siguio el orden LIFO");
     }
   }
   public static void pruebaPilaArregloLIFO(){
@@ -73,21 +72,21 @@ public class EstructurasTest {
     if(resultado != null && resultado==2){
       System.out.println("La pila con arreglo sigue el orden LIFO");
     }else{
-      System.out.println("La pila con arreglo no siguio el orden FIFO");
+      System.out.println("La pila con arreglo no siguio el orden LIFO");
     }
   }
-  public static void testFilaEnlazadaFIFO(){
+  public static void pruebaFilaEnlazadaFIFO(){
     Fila<Integer> fila = new FilaEnlazada<>();
     fila.enqueue(1);
     fila.enqueue(2);
-    Integer resultado = fila.enqueue();
+    Integer resultado = fila.dequeue();
     if(resultado != null && resultado==1){
       System.out.println("La fila enlazada siguio el orden FIFO");
     }else{
       System.out.println("La fila enlazada no siguio el orden FIFO");
     }
   }
-  public static void testFilaArregloFIFO(){
+  public static void pruebaFilaArregloFIFO(){
     Fila<Integer> fila = new FilaArreglo<>();
     fila.enqueue(1);
     fila.enqueue(2);
