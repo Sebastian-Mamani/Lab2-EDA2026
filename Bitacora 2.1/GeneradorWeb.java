@@ -27,9 +27,9 @@ public class GeneradorWeb {
   /**
   Genera una secuencia valida de etiquetas HTML simuladas
   @param n Cantidad de etiquetas de apertura
-  @return Arreglo de strins con la secuencia generada
+  @return Arreglo de strings con la secuencia generada
   */
-  public static String[] generadorDocumentoAnidado (int n) {
+  public static String[] generarDocumentoAnidado (int n) {
     return null;
   }
 }
