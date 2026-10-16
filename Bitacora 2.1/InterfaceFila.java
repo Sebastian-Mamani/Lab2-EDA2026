@@ -1,3 +1,6 @@
+/**
+Interfaz que define el metodo FIFO de una Fila
+  */
 public interface Fila<T> {
 void enqueue(T item);
 T dequeue();
