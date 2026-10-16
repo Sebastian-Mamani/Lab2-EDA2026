@@ -1,3 +1,6 @@
+/**
+Implementacion de una Pila usando nodos enlazados
+  */
 public class PilaEnlazada<T> implements Pila<T> {
 public void push(T item){
 }
