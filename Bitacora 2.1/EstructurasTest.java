@@ -11,7 +11,7 @@ public class EstructurasTest {
   }
   public static void pruebaPilaVacia(){
     Pila<Integer> pila= new PilaEnlazada<>();
-    boolean vacia = pila.isEmpty(9;
+    boolean vacia = pila.isEmpty();
 
   if (vacia){
     System.out.println("La pila esta vacia correctamente");
