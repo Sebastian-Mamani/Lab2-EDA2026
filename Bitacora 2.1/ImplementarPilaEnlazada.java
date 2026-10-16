@@ -1,5 +1,6 @@
 /**
 Implementacion de una Pila usando nodos enlazados
+@param <T> Tipo de elemento a almacenar
   */
 public class PilaEnlazada<T> implements Pila<T> {
 public void push(T item){
