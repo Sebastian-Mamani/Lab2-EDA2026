@@ -1,6 +1,7 @@
 /**
 use booleanos por que se me hacia simple para comparar si estaba vacio o no
 creo que la prueba esta bien 
+voy a hacer las de arreglo igual despues de comer
 */
 public class EstructurasTest {
   public static void main(String[] args) {
