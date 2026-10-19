@@ -13,12 +13,12 @@ public class EstructurasTest {
     pruebaPilaEnlazadaLIFO();
     pruebaPilaArregloLIFO();
     pruebaFilaEnlazadaFIFO();
-    pruebaFilaArreglo();
+    pruebaFilaArregloFIFO();
 
     // Pruebas de estres y casos borde 
     System.out.println("Iniciando pruebas de estres");
-    pruebaSacarEstructuraVacia();
-    pruebaCrecimiendoDinamicoDeArreglo();
+    pruebaSacarPilaVacia();
+    pruebaCrecimientoDinamicoDeArreglo();
     pruebaPopPush();
   }
   public static void pruebaPilaEnlazadaVacia(){
@@ -137,7 +137,7 @@ public class EstructurasTest {
   public static void pruebaPopPush(){
     Pila<Integer> pila = new PilaEnlazada<>();
     System.out.println("Prueba de pop y push intercalados");
-    pila push(!=);
+    pila push(10);
     pila.push(20);
     pila.pop();
     pila.push(30);
