@@ -14,6 +14,12 @@ public class EstructurasTest {
     pruebaPilaArregloLIFO();
     pruebaFilaEnlazadaFIFO();
     pruebaFilaArreglo();
+
+    // Pruebas de estres y casos borde 
+    System.out.println("Iniciando pruebas de estres");
+    pruebaSacarEstructuraVacia();
+    pruebaCrecimiendoDinamicoDeArreglo();
+    pruebaPopPush();
   }
   public static void pruebaPilaEnlazadaVacia(){
     Pila<Integer> pila= new PilaEnlazada<>();
@@ -98,4 +104,46 @@ public class EstructurasTest {
       System.out.println("La fila con arreglo no siguio el orden FIFO");
     }
   }
-}
+  public static void pruebaSacarPilaVacia(){
+    Pila<Integer> pila = new PilaEnlazada<>();
+    System.out.println("Prueba para sacar de pila vacia");
+    try{
+      Integer resultado = pila.pop();
+      if (resultado==null){
+        System.out.println("pop() devolvio null por estar vacia");
+      }else{
+        System.out.println("Hubo un error, pop() devolvio un valor, pero deberia estar vacia");
+      }
+    } catch (Exception e){
+      System.out.println("Se atrapo la excepcion que se esperaba (" +e.getClass().getSimpleName()+")");
+    }
+  }
+  public static void pruebaCrecimientoDinamicoDeArreglo(){
+    Fila<Integer> fila = new FilaArreglo<>();
+    System.out.println("Prueba de crecimeinto dinamico (10000 inserciones)");
+    try{
+      for (int i=0; i<10000 ; i++){
+        fila.enqueue(i);
+      }
+      if(fila.size()==10000){
+    System.out.println("El arreglo fue redimensionado correctamente");
+  }else{
+        System.out.println("Se presento un fallo en el redimensionamiento. Tamaño actual de " +fila.size());
+      }
+    }catch (Exception e){
+      System.out.println("El arreglo no soporto la carga");
+    }
+  }
+  public static void pruebaPopPush(){
+    Pila<Integer> pila = new PilaEnlazada<>();
+    System.out.println("Prueba de pop y push intercalados");
+    pila push(!=);
+    pila.push(20);
+    pila.pop();
+    pila.push(30);
+    if(pila.size()==2 && pila.peek() !=null && pila.peek()==30){
+      System.out.println("Puntero y tamaño sincronizados despues de operaciones intercaladas");
+    }else{
+      System.out.println("Hubo un error al mezclar push y pop");
+    }
+  }
