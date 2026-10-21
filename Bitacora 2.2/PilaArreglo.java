@@ -9,7 +9,7 @@ public T pop() {
 return null;
 }
 public T peek() {
-return null:
+return null;
 }
 public boolean isEmpty() {
 return true;
@@ -23,4 +23,5 @@ return 0;
 }
 public int getCapacidadMaximaObservada() {
 return 0;
+}
 }
