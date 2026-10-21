@@ -1,7 +1,4 @@
 /**
------Santi si lees esto es por que recien me di cuenta que edite el archivo de bitacora 2.1 directametne en lugar 
-de hacer una copia para la 2.2 XD. Por lo menos ya lo enviamos y tengo un zip en todo caso, pero weno. De ahi se 
-borra este mensaje.
 Clase de pruebas para verificar las implementaciones de Pila y Fila
 Valida el comportamiento de estructuras vacias y el funcionamiento Lifo y Fifo 
 */
@@ -140,7 +137,7 @@ public class EstructurasTest {
   public static void pruebaPopPush(){
     Pila<Integer> pila = new PilaEnlazada<>();
     System.out.println("Prueba de pop y push intercalados");
-    pila push(10);
+    pila.push(10);
     pila.push(20);
     pila.pop();
     pila.push(30);
