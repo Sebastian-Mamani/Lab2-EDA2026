@@ -1,33 +1,16 @@
-/* implementar
-
-  PilaEnlazada<String> //vacia
-  PilaArreglo<String> //vacia
-
-  GeneradorWeb sitio = new GeneradorWeb(n, n + r); //construir una nueva instancia
-  FilaEnlazada<Integer> //vacia
-  FilaArreglo<Integer> //vacia
-  recorrerSitio(sitio, 0, frontera) //medir por separado
-  */
-import edu.princeton.cs.algs4.Out;
 import edu.princeton.cs.algs4.StopwatchCPU;
-import java.util.ArrayList;
 
 public class Experimento {
-  private Experimento {}
+  private Experimento() {}
   public static void main(String[] args) {
     System.out.println("empieza experimento");
+    //Cabecera para el archivo CSV para el excel
+    System.out.println("N,PilaEnlazada,PilaArreglo,FilaEnlazada,FilaArreglo");
+    WebCrawlerOffline crawler = new WebCrawlerOffline();
+    int r = 10 //Este es el rango base para los enlaces
 
-    // esto es para PILA
-    //implementar variable n
-    GeneradorWeb.generarDocumentoAnidado(n)
-    //implementar variable tokens y pila en experimento
-    validarEtiquetas(tokens, pila)
-    
-    GeneradorWeb sitio = new GeneradorWeb(n, n+r); //construye nueva instancia
-    // esto es para PILA
-
-    // esto es para FILA
-    recorrerSitio(sitio, 0, frontera) //usado para medir por separado
-
-    // esto es para FILA
-}
+    //Evaluacion Doubling Ratio
+      for (int n = 1000; n <= 64000; n *= 2){
+      //Mediciones para LIFO
+    String[] tokens = GeneradorWeb.generarDocumentoAnidado(n);
+      Pila<String> pilaEnlazada = new PilaEnlazada
