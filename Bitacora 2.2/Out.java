@@ -16,7 +16,7 @@ import java.util.Locale;
  *  <a href="https://introcs.cs.princeton.edu/31datatype">Section 3.1</a> of
  *  <i>Computer Science: An Interdisciplinary Approach</i>
  *  by Robert Sedgewick and Kevin Wayne.
- *
+ *  Modificacion propia: Se elemino la declaracion de paquete para uso local en el proyecto.
  *  @author Robert Sedgewick
  *  @author Kevin Wayne
  */
