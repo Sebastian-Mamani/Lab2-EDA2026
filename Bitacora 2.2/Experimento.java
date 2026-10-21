@@ -46,9 +46,9 @@ public class Experimento {
         if (!okEnlazada || !okArreglo) {
           System.out.println("error validando etiquetas con n = " +n);
         }
-        int redim = pilaArreglo.getCantidadRediensionamientos();
+        int redim = pilaArreglo.getCantidadRedimensionamientos();
         int capMax = pilaArreglo.getCapacidadMaximaObservada();
-        archivoPila.println(n + "," + r + "," + tEnlazada + "," tArreglo + "," + redim + "," + capMax);
+        archivoPila.println(n + "," + r + "," + tEnlazada + "," + tArreglo + "," + redim + "," + capMax);
       }
     }
     archivoPila.close();
@@ -60,9 +60,9 @@ public class Experimento {
     for (int t = 10; t <=13; t++){
       int n= 1<<t;
       //calentamiento para fila
-      GeneradorWeb sitioCalentamentio = new GeneradorWeb( n, n+999L);
+      GeneradorWeb sitioCalentamiento = new GeneradorWeb( n, n+999L);
       crawler.recorrerSitio(sitioCalentamiento, 0, new FilaEnlazada<Integer>());
-      crawler.recorrerSitio(sitioCalentamiento, 0, new FilArreglo<Integer>());
+      crawler.recorrerSitio(sitioCalentamiento, 0, new FilaArreglo<Integer>());
       
     for (int r = 0; r < 30; r++){
       long seed = (long) n + r;
@@ -84,7 +84,7 @@ public class Experimento {
       }else{
         StopwatchCPU timer1 = new StopwatchCPU();
         paginasArreglo = crawler.recorrerSitio(sitio, 0, filaArreglo);
-        tEnlazada = timer1.elapsedTime();
+        tArreglo = timer1.elapsedTime();
         StopwatchCPU timer2 = new StopwatchCPU();
         paginasEnlazada = crawler.recorrerSitio(sitio, 0, filaEnlazada);
         tEnlazada = timer2.elapsedTime();
@@ -92,9 +92,9 @@ public class Experimento {
       if (paginasEnlazada != n || paginasArreglo != n){
         System.out.println("error en recorrido con n = " + n);
       }
-       int redim = filaArreglo.getCantidadRediensionamientos();
+       int redim = filaArreglo.getCantidadRedimensionamientos();
        int capMax = filaArreglo.getCapacidadMaximaObservada();
-       archivoPila.println(n + "," + r + "," + seed + "," + tEnlazada + "," tArreglo + "," + redim + "," + capMax);
+       archivoFila.println(n + "," + r + "," + seed + "," + tEnlazada + "," + tArreglo + "," + redim + "," + capMax);
     }
   }
   archivoFila.close();
