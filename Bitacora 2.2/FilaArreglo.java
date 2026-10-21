@@ -24,3 +24,4 @@ public int getCantidadRedimensionamientos() {
   public int getCapacidadMaximaObservada() {
     return 0;
   }
+}
