@@ -6,7 +6,7 @@ public class FilaEnlazada<T> implements Fila<T> {
   public void enqueue (T item) {
   }
   public T dequeue() {
-    return null 
+    return null; 
       }
   public T peek() {
     return null;
