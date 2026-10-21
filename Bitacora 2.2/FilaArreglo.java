@@ -42,7 +42,7 @@ public class FilaArreglo implements Queue {
             return null;
         }
         T item = arreglo[inicio];
-        arreglo[inicio] = null // evitamos loitering
+        arreglo[inicio] = null; // evitamos loitering
         cantidad--;
         inicio++;
         if (inicio == arreglo.length) { //si llega al final se reinicia valor
