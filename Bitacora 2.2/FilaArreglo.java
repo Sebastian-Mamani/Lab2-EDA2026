@@ -1,4 +1,4 @@
-public class FilaArreglo implements Queue {
+public class FilaArreglo<T> implements Fila<T> {
     private T[] arreglo;
     private int cantidad;
     private int inicio;
