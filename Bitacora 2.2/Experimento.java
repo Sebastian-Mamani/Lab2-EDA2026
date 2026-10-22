@@ -10,7 +10,7 @@ public class Experimento {
   //esto es para PILA
   Out archivoPila = new Out("pila.csv");
     archivoPila.println("n,repeticion,tEnlazada,tArreglo,redimensionamientos,capacidadMaxima");
-    for (int t=10; t <=13; t++){
+    for (int t=10; t <=18; t++){
       int n = 1<< t;
 
       String[] tokens = GeneradorWeb.generarDocumentoAnidado(n);
@@ -57,7 +57,7 @@ public class Experimento {
     Out archivoFila = new Out("fila.csv");
     archivoFila.println("n, repeticion, seed, tEnlazada,tArreglo,redimensionamientos,capacidadMaxima");
 
-    for (int t = 10; t <=13; t++){
+    for (int t = 10; t <=18; t++){
       int n= 1<<t;
       //calentamiento para fila
       GeneradorWeb sitioCalentamiento = new GeneradorWeb( n, n+999L);
