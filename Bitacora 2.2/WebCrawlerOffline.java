@@ -22,8 +22,7 @@ public class WebCrawlerOffline {
                 if (!etiquetaActual.equals(cierreEsperado)) {
                     return false;
                 }
-            } 
-            else {
+            }else{
                 pila.push(etiquetaActual);
             }
         }
