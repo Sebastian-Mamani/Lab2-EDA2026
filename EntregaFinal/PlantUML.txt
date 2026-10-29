@@ -1,0 +1,131 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam monochrome true
+hide empty members
+
+interface Pila<T> {
+  + push(item: T): void
+  + pop(): T
+  + peek(): T
+  + isEmpty(): boolean
+  + size(): int
+}
+
+interface Fila<T> {
+  + enqueue(item: T): void
+  + dequeue(): T
+  + peek(): T
+  + isEmpty(): boolean
+  + size(): int
+}
+
+class PilaArreglo<T> {
+  - arreglo: T[]
+  - cantidad: int
+  - cantidadRedimensionamientos: int
+  - capacidadMaximaObservada: int
+  + PilaArreglo()
+  - redimensionar(nuevaCapacidad: int): void
+  + push(item: T): void
+  + pop(): T
+  + peek(): T
+  + isEmpty(): boolean
+  + size(): int
+  + getCantidadRedimensionamientos(): int
+  + getCapacidadMaximaObservada(): int
+}
+
+class FilaArreglo<T> {
+  - arreglo: T[]
+  - cantidad: int
+  - inicio: int
+  - fin: int
+  - cantidadRedimensionamientos: int
+  - capacidadMaximaObservada: int
+  + FilaArreglo()
+  - redimensionar(nuevaCapacidad: int): void
+  + enqueue(item: T): void
+  + dequeue(): T
+  + peek(): T
+  + isEmpty(): boolean
+  + size(): int
+  + getCantidadRedimensionamientos(): int
+  + getCapacidadMaximaObservada(): int
+}
+
+class PilaEnlazada<T> {
+  - tope: Nodo
+  - cantidad: int
+  + PilaEnlazada()
+  + push(item: T): void
+  + pop(): T
+  + peek(): T
+  + isEmpty(): boolean
+  + size(): int
+}
+
+class FilaEnlazada<T> {
+  - frente: Nodo
+  - finalFila: Nodo
+  - cantidad: int
+  + FilaEnlazada()
+  + enqueue(item: T): void
+  + dequeue(): T
+  + peek(): T
+  + isEmpty(): boolean
+  + size(): int
+}
+
+class GeneradorWeb {
+  - numPaginas: int
+  - adyacencia: List<List<Integer>>
+  + GeneradorWeb(n: int, seed: long)
+  + cantidadPaginas(): int
+  + obtenerEnlaces(paginaId: int): List<Integer>
+  + {static} generarDocumentoAnidado(n: int): String[]
+}
+
+class WebCrawlerOffline {
+  + WebCrawlerOffline()
+  + validarEtiquetas(documento: String[], pila: Pila<String>): boolean
+  + recorrerSitio(grafo: GeneradorWeb, inicio: int, fila: Fila<Integer>): int
+}
+
+class Experimento {
+  - Experimento()
+  + {static} main(args: String[]): void
+}
+
+class StopwatchCPU {
+  - threadTimer: ThreadMXBean
+  - start: long
+  + StopwatchCPU()
+  + elapsedTime(): double
+}
+
+class Out {
+  - out: PrintWriter
+  + Out(filename: String)
+  + println(x: Object): void
+  + close(): void
+}
+
+' Relaciones de realizacion (implements)
+PilaArreglo ..|> Pila
+PilaEnlazada ..|> Pila
+FilaArreglo ..|> Fila
+FilaEnlazada ..|> Fila
+
+' Relaciones de dependencia (uso)
+Experimento ..> WebCrawlerOffline
+Experimento ..> GeneradorWeb
+Experimento ..> StopwatchCPU
+Experimento ..> Out
+Experimento ..> Pila
+Experimento ..> Fila
+
+WebCrawlerOffline ..> Pila
+WebCrawlerOffline ..> Fila
+WebCrawlerOffline ..> GeneradorWeb
+
+@enduml
